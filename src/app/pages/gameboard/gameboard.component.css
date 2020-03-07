@@ -3,6 +3,11 @@ div {
   padding: 5px 2px;
 }
 
+.selected {
+  background-color: #C0C0C0;
+  cursor: pointer;
+}
+
 .end-game {
   height: 100%;
   width: 100%;

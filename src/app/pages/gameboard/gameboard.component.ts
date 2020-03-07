@@ -10,6 +10,7 @@ export class GameboardComponent implements OnInit {
   public state: any;
   public cards: Array<any>;
   public selectedCard: string;
+  public clicked: Number;
   public error: String;
   constructor(
     private gameService: GameService
@@ -17,6 +18,11 @@ export class GameboardComponent implements OnInit {
 
   ngOnInit() {
     this.getGameState();
+  }
+
+  public selectCard(card) {
+    this.selectedCard = card.id;
+
   }
 
   private getGameState() {
