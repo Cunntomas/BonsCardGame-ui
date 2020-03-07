@@ -2,14 +2,14 @@
   <div class="entities">
 
     <div class="player">
-      <p>Player</p>
+      <b><p>Player</p></b>
       <p>hp: {{state.player.hp}}</p>
       <p>shield: {{state.player.shield}}</p>
       <p *ngIf="state.player.skipsTurn">Skip's turn</p>
 
     </div>
     <div class="monster">
-      <p>Monster</p>
+      <b><p>Monster</p></b>
       <p>hp: {{state.monster.hp}}</p>
       <p>shield: {{state.monster.shield}}</p>
 
@@ -22,18 +22,22 @@
   </div>
   <div class="played">
     <div class="playedCard" >
-      <p>Monster used: Effect: {{state.monster.played.effect}} Card Power: {{state.monster.played.effectAmount ? state.monster.played.effectAmount : '-'}}</p>
+      <p> <b>Monster used </b> : </p>
+      <p><b>Effect</b>: {{state.monster.played.effect}} <b>Card Power</b>: {{state.monster.played.effectAmount ? state.monster.played.effectAmount : '-'}}</p>
     </div>
     <div class="playedCard" >
-      <p>Player used: Effect: {{state.player.played.effect}} Card Power: {{state.player.played.effectAmount ? state.player.played.effectAmount : '-'}}</p>
+      <p> <b>Player used </b>: </p>
+      <p> <b>Effect</b>: {{state.player.played.effect}} <b>Card Power</b>: {{state.player.played.effectAmount ? state.player.played.effectAmount : '-'}}</p>
     </div>
   </div>
-  <div class="cards" *ngFor="let card of cards;let i=index">
-    <div class="card" (click)="this.selectedCard = card.id; clicked = i" [ngClass]="{selected: i==clicked }">
+  <h3>Your Cards:</h3>
+    <div class="cards" *ngFor="let card of cards;let i=index">
+
+      <div class="card" (click)="this.selectedCard = card.id; clicked = i" [ngClass]="{selected: i==clicked }">
         <p>Effect: {{card.effect}}</p>
         <p *ngIf="card.effectAmount">Card power: {{card.effectAmount}}</p>
+      </div>
     </div>
-  </div>
 
 </div>
 

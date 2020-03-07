@@ -1,8 +1,24 @@
 .intro-form{
   max-width: 500px;
   margin: auto;
+  width: 100%;
 
 }
-.btn-page: {
-  background-color: #0cbfc7;
+.btn-page {
+    background: #0cbfc7;
+    line-height: 2rem;
+    padding: 0 1.5rem;
+    margin: 3px 0px;
+    width: 100%;
+}
+
+p {
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+}
+.input-page {
+  width: 100%
 }
