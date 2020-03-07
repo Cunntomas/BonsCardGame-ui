@@ -1,10 +1,9 @@
 div {
   margin: 3px;
-  padding: 5px 2px;
 }
 
 .selected {
-  background-color: #C0C0C0;
+  background-color: #326F76;
   cursor: pointer;
 }
 
@@ -15,7 +14,7 @@ div {
   z-index: 1;
   position: absolute;
   top:0;
-  left:0
+  left:0;
 }
 
 .end-game-popup {
@@ -36,31 +35,58 @@ div {
 }
 
 .turns {
+  border-color: #4CA1AA;
   border-style: groove;
-  display: inline-block;
+  display: inline-grid;
+  padding: 15px;
+  background-color: #d6d4e0;
+  height: 117.5px
+}
+
+.btn {
+  background-color: #b8a9c9;
 }
 
 .entities {
-  display: inline-block;
+  display: inline-flex;
 }
 .player {
+  border-color: #4CA1AA;
   border-style: groove;
+  padding: 15px;
+  background-color: #d6d4e0;
 }
 
 .monster {
+  border-color: #4CA1AA;
   border-style: groove;
+  padding: 15px;
+  background-color: #d6d4e0;
 }
 
 .cards {
-  display: inline-block;
+  display: inline-flex;
+  background-color: #80ced6;
+
 }
 
 .card {
-  height: 25%;
   border-style: groove;
+  border-color: #4CA1AA;
+  padding: 20px;
+  height: 70px;
 }
 
 .card:hover {
-  background-color: #C0C0C0;
+  background-color: #34828B;
   cursor: pointer;
+}
+
+.played {
+  border-color: #4CA1AA;
+  border-style: groove;
+  background-color: #40B6C1;
+  display: block;
+  padding: 15px;
+  width: 555px;
 }

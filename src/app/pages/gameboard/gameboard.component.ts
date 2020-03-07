@@ -20,11 +20,6 @@ export class GameboardComponent implements OnInit {
     this.getGameState();
   }
 
-  public selectCard(card) {
-    this.selectedCard = card.id;
-
-  }
-
   private getGameState() {
     return this.gameService.getGameState()
       .then((state) => {
