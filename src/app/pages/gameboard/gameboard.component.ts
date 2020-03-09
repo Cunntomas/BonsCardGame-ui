@@ -36,11 +36,13 @@ export class GameboardComponent implements OnInit {
     return this.gameService.endTurn(this.selectedCard)
       .then((state) => {
         this.selectedCard = '';
+        this.clicked = null;
         this.state = state.state;
         this.cards = this.state.player.cards;
       })
       .catch((error) => {
         this.selectedCard = '';
+        this.clicked = null;
         this.error = 'An error has ocurred. Please, refresh the page.'
       });
   }
