@@ -25,8 +25,12 @@ export class StartGameComponent implements OnInit {
         localStorage.setItem('nickname', this.nickname);
         this.route.navigate(['/gameboard']);
       })
-      .catch(() => {
-        return this.error = 'An error has ocurred';
+      .catch((error) => {
+        if(error.status === 400){
+          return this.error = 'Please, pick another nickname';
+        } else {
+          return this.error = 'Something went wrong'
+        }
       });
   }
 }
